@@ -1,0 +1,10 @@
+let r = Number(prompt("nhap ban kinh"));
+const pi = 3.1416;
+let v = ((4/3)*pi*(r*3)).toFixed(2);
+document.write("the tich hinh cau la:"+v);
+document.write("<br>");
+let s_mc = (4*pi*(r*2)).toFixed(2);
+document.write("dien tich mat cau la:"+s_mc);
+document.write("<br>");
+let p_max = (2*pi*r).toFixed(2);
+document.write("chu vi lon nhat hinh cau"+p_max);

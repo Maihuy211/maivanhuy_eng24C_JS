@@ -1,0 +1,14 @@
+let r = Number(prompt("nhap ban kinh:"));
+let h = Number(prompt("nhap chieu cao:"));
+const pi = 3.1416;
+let sxq = (2*pi*r*h).toFixed(2);
+document.write("Dien tich xung quanh hinh tru la: "+sxq);
+document.write("<br>");
+let stp = (2*pi*r*h + 2*pi*(r*2)).toFixed(2);
+document.write("dien tich toan phan hinh tru la: "+stp);
+document.write("<br>");
+let v = (pi*(r*2)*h).toFixed(2);
+document.write("the tich hinh tru la: "+v);
+document.write("<br>");
+let p = (2*pi*r).toFixed(2);
+document.write("chu vi day hinh tru la: "+p);

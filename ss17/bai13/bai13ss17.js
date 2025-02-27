@@ -1,11 +1,4 @@
-let amount = Number(prompt("so tien gui"));
+let cash = Number(prompt("so tien gui"));
 let month = Number(prompt("so thang gui"));
-if (amount < 0){
-    alert("nhap lai so tien gui");
-    let amount = Number(prompt("nhap so tien gui"));
-}else if(month < 0){
-    alert("nhap lai so thang gui");
-    let month = Number(prompt("nhao so thang gui"));
-}
-let total = Math.abs(amount*((0.043 * 1/12)) *month);
-alert(total);
+let total = Math.abs(cash*(0.043/12)*month);
+document.write("so tien lai la: "+total);

@@ -10,7 +10,7 @@ if (hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59 && second >= 0 && sec
         period = "PM";
     } else if (hour > 12) {
         hour -= 12;
-        period = "PM";
+        period = "PM"; 
     }
 
     alert(`${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')} ${period}`);

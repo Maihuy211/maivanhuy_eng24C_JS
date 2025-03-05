@@ -6,7 +6,7 @@ if(Number.isInteger(number)==true){
             alert("Đây là số đối xứng");
             break;
         }else{
-            alert("Đây ko là số đối xứng")
+            alert("Đây ko là số đối xứng");
         }
     }
 }

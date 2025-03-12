@@ -19,7 +19,7 @@ if (arr.length === 0) {
     if (even.length === 0) {
         console.log("Không có số chẵn trong mảng");
     } else {
-        console.log("Mảng sau khi lọc số chẵn:",even);
+        console.log(even);
     }
 }
 

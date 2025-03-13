@@ -1,5 +1,5 @@
 let arr = [];
-let n =+prompt("Nhập số lượng phần tử")
+let n =+prompt("Nhập số lượng phần tử (10-20)");
 if(n>=10&&n<=20){
     for (let i = 0; i < n; i++) {
         let number = prompt(`Nhập số thứ ${i + 1}: `);

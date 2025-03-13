@@ -34,5 +34,5 @@ if(n>=10&&n<=20){
         }
     }
 }else{
-    console.log("Dữ liệu không hợp lệ")
+    console.log("Dữ liệu không hợp lệ");
 }

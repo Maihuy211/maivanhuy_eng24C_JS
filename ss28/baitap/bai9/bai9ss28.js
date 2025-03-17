@@ -12,7 +12,7 @@ do {
     `);
     switch (choice) {
         case 1:
-            addBook();
+            addBooks();
             break;
         case 2:
             displayBooks();
@@ -36,40 +36,26 @@ do {
             console.log("Lựa chọn không hợp lệ!");
     }
 } while (choice !== 7);
-
-function addBook() {
-    let title = prompt("Nhập tên sách:");
-    let author = prompt("Nhập tác giả:");
-    let year = +prompt("Nhập năm xuất bản:");
-    let price = +prompt("Nhập giá sách:");
-    let id = Math.floor(Math.random() * 9999943 + new Date().getMilliseconds());
-    let newBook = {
-        id: id,
-        title: title,
-        author: author,
-        year: year,
-        price: price,
-        isAvailable: true
-    };
-    books.push(newBook);
-    console.log("Thêm sách thành công", newBook);
-}
-function addBook() {
-    let title = prompt("Nhập tên sách:");
-    let author = prompt("Nhập tác giả:");
-    let year = +prompt("Nhập năm xuất bản:");
-    let price = +prompt("Nhập giá sách:");
-    let id = Math.floor(Math.random() * 9999943 + new Date().getMilliseconds());
-    let newBook = {
-        id: id,
-        title: title,
-        author: author,
-        year: year,
-        price: price,
-        isAvailable: true
-    };
-    books.push(newBook);
-    console.log("Thêm sách thành công", newBook);
+function addBooks() {
+    let count = +prompt("Nhập số lượng sách muốn thêm:");
+    for (let i = 0; i < count; i++) {
+        console.log(`Nhập thông tin cho sách thứ ${i + 1}:`);
+        let title = prompt("Nhập tên sách:");
+        let author = prompt("Nhập tác giả:");
+        let year = +prompt("Nhập năm xuất bản:");
+        let price = +prompt("Nhập giá sách:");
+        let id = Math.floor(Math.random() * 9999943 + new Date().getMilliseconds());
+        let newBook = {
+            id: id,
+            title: title,
+            author: author,
+            year: year,
+            price: price,
+            isAvailable: true
+        };
+        books.push(newBook);
+        console.log("Thêm sách thành công", newBook);
+    }
 }
 function displayBooks() {
     if (books.length === 0) {
@@ -116,4 +102,5 @@ function sortBooksByPrice() {
     books.sort((a, b) => a.price - b.price);
     console.log("Danh sách sách sau khi sắp xếp theo giá tăng dần:", books);
 }
+
 

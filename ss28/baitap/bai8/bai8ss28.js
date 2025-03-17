@@ -29,32 +29,36 @@ do {
     }
 } while (choice !== 5);
 function addEmployee() {
-    let name = prompt("Nhập tên nhân viên:");
-    let position = prompt("Nhập vị trí:");
-    let salary = +prompt("Nhập mức lương:");
-    let id = Math.floor(Math.random() * 9999943 + new Date().getMilliseconds());
-    let newEmployee = {
-        id: id,
-        name: name,
-        position: position,
-        salary: salary
-    };
-    employee.push(newEmployee);
-    console.log("Thêm nhân viên thành công", newEmployee);
+    let count = +prompt("Nhập số lượng nhân viên muốn thêm:");
+    for (let i = 0; i < count; i++) {
+        console.log(`Nhập thông tin nhân viên thứ ${i + 1}:`);
+        let name = prompt("Nhập tên nhân viên:");
+        let position = prompt("Nhập vị trí:");
+        let salary = +prompt("Nhập mức lương:");
+        let id = Math.floor(Math.random() * 9999943 + new Date().getMilliseconds());
+        let newEmployee = {
+            id: id,
+            name: name,
+            position: position,
+            salary: salary
+        };
+        employee.push(newEmployee);
+        console.log("Thêm nhân viên thành công", newEmployee);
+    }
 }
-function deleteEmployee() {
-    let id = +prompt("Nhập ID nhân viên muốn xoá:");
-    let findIndex = employee.findIndex(item => item.id === id);
+function deleteProduct() {
+    let id = +prompt("Nhập ID của sản phẩm cần xóa:");
+    let findIndex = product.findIndex(item => item.id === id);
     if (findIndex !== -1) {
-        let confirmDelete = confirm(`Bạn có chắc chắn muốn xoá nhân viên ${employee[findIndex].name} không?`);
+        let confirmDelete = confirm(`Bạn có chắc chắn muốn xoá sản phẩm ${product[findIndex].name} không?`);
         if (confirmDelete) {
-            employee.splice(findIndex, 1);
-            console.log("Xóa nhân viên thành công!");
+            product.splice(findIndex, 1);
+            console.log("Xóa sản phẩm thành công!");
         } else {
-            console.log("Hủy xoá nhân viên.");
+            console.log("Hủy xoá sản phẩm.");
         }
     } else {
-        console.log("Không tìm thấy nhân viên có ID:", id);
+        console.log("Không tìm thấy sản phẩm có ID:", id);
     }
 }
 function updateSalary() {

@@ -46,19 +46,19 @@ function addEmployee() {
         console.log("Thêm nhân viên thành công", newEmployee);
     }
 }
-function deleteProduct() {
-    let id = +prompt("Nhập ID của sản phẩm cần xóa:");
-    let findIndex = product.findIndex(item => item.id === id);
+function deleteEmployee() {
+    let id = +prompt("Nhập ID nhân viên muốn xoá:");
+    let findIndex = employee.findIndex(item => item.id === id);
     if (findIndex !== -1) {
-        let confirmDelete = confirm(`Bạn có chắc chắn muốn xoá sản phẩm ${product[findIndex].name} không?`);
+        let confirmDelete = confirm(`Bạn có chắc chắn muốn xoá nhân viên ${employee[findIndex].name} không?`);
         if (confirmDelete) {
-            product.splice(findIndex, 1);
-            console.log("Xóa sản phẩm thành công!");
+            employee.splice(findIndex, 1);
+            console.log("Xóa nhân viên thành công!");
         } else {
-            console.log("Hủy xoá sản phẩm.");
+            console.log("Hủy xoá nhân viên.");
         }
     } else {
-        console.log("Không tìm thấy sản phẩm có ID:", id);
+        console.log("Không tìm thấy nhân viên có ID:", id);
     }
 }
 function updateSalary() {

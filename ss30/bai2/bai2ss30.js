@@ -74,7 +74,6 @@ do {
             console.log("Lựa chọn không hợp lệ");
     }
 } while (choice !== 8);
-
 function displayCategory() {
     let category = prompt("Nhập thể loại sách: ");
     let result = books.filter(item => item.category.includes(category));
@@ -84,7 +83,6 @@ function displayCategory() {
         console.table(result);
     }
 }
-
 function addBook() {
     let count = +prompt("Nhập số lượng sách muốn thêm vào kho:");
     for (let i = 0; i < count; i++) {
@@ -105,7 +103,6 @@ function addBook() {
         console.log("Thêm sách thành công", newBook);
     }
 }
-
 function searchBook() {
     let key = prompt("Nhập tên hoặc ID sách:");
     let result = books.find(item => item.name.includes(key) || item.id == key);
@@ -115,7 +112,6 @@ function searchBook() {
         console.log("Không tìm thấy sách");
     }
 }
-
 function buyBook() {
     let id = +prompt("Nhập ID sách cần mua:");
     let book = books.find(item => item.id === id);
@@ -132,7 +128,8 @@ function buyBook() {
         if (cartItem) {
             cartItem.quantity += quantity;
         } else {
-            cart.push({ id: book.id, 
+            cart.push({ 
+                id: book.id, 
                 name: book.name, 
                 price: book.price, 
                 quantity 
@@ -141,7 +138,6 @@ function buyBook() {
         console.log("Mua thành công!");
     }
 }
-
 function menuSort() {
     do {
         choice2 = prompt(`
@@ -162,7 +158,6 @@ function menuSort() {
         }
     } while (choice2 === 'a' || choice2 === 'b');
 }
-
 function sortPriceProductIncease() {
     books.sort(function (a, b){
         return a.price - b.price;
@@ -170,7 +165,6 @@ function sortPriceProductIncease() {
     console.log("Sản phẩm của cửa hàng theo giá tăng dần");
     displayProduct();
 }
-
 function sortPriceProductDecrese() {
     books.sort(function (a, b){
         return b.price - a.price;
@@ -178,11 +172,9 @@ function sortPriceProductDecrese() {
     console.log("Sản phẩm của cửa hàng theo giá giảm dần");
     displayProduct();
 }
-
 function displayProduct() {
     console.table(books);
 }
-
 function calculateTotal() {
     if (cart.length === 0) {
         console.log("Giỏ hàng trống");
@@ -191,7 +183,6 @@ function calculateTotal() {
     let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     console.log(`Tổng tiền cần thanh toán: ${total}`);
 }
-
 function displayTotalBooks() {
     let total = books.reduce((sum, item) => sum + item.quantity, 0);
     console.log(`Tổng số lượng sách trong kho: ${total}`);

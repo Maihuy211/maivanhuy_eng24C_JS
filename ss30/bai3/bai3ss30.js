@@ -129,7 +129,12 @@ function buyPhone() {
         if (cartItem) {
             cartItem.quantity += quantity;
         } else {
-            cart.push({ id: phone.id, name: phone.name, price: phone.price, quantity });
+            cart.push({ 
+                id: phone.id, 
+                name: phone.name, 
+                price: phone.price, 
+                quantity 
+            });
         }
         console.log("Mua thành công!");
     }

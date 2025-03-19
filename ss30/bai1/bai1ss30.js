@@ -90,9 +90,9 @@ function menuSort() {
     }while(choice2==='a'||choice2==='b');
 }
 function sortPriceProductIncease() {
-    products.sort(function (a, b){
+   products.sort(function (a, b){
         return a.price - b.price;
-    });
+    }); 
     console.log("Sản phẩm của cửa hàng theo giá tăng dần");
     displayProduct();
 }
@@ -144,4 +144,4 @@ function calculateTotal() {
     }
     let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     console.log(`Tổng số tiền thanh toán: ${total}`);
-}
+}1

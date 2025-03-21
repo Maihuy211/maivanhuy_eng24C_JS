@@ -36,12 +36,13 @@ function renderTodo(){
     listTodo.innerHTML="";
     toDoList.forEach(function(item){
         if(item.completed === false){
-            listTodo.innerHTML += `<li>${item.task}<span class="close">×</span></li>`
+            listTodo.innerHTML += `<li>${item.task}<span class="close" onclick="deleteTodo(${item.id})">×</span></li>`
         }else{
-            listTodo.innerHTML += `<li class="checked">${item.task}<span class="close">×</span></li>`
+            listTodo.innerHTML += `<li class="checked">${item.task}<span class="close" onclick="deleteTodo(${item.id})">×</span></li>`
         }
     });
 }
+renderTodo();
 let add  = document.getElementById("addBtn");
 add.onclick = function(){
     addTodo();
@@ -66,5 +67,14 @@ let todo = {
 //b5:Gọi hàm rendertodo để hiển thị lại bao gồm cả hàm đã thêm
 toDoList.push(todo);
 renderTodo();
+}
+renderTodo();
+
+// gắn sự kiện onclick cho nút xoá trên giao diện
+function deleteTodo(id) {
+    // b2 xoá phần tử có if được truyền vào trong mảng ban đầu 
+    toDoList = toDoList.filter((task)=> task.id !== id);
+    // b3 gọi hàm rederTodo để hiện thị toàn bộ task , trừ task đã xoá 
+    renderTodo();
 }
 renderTodo();

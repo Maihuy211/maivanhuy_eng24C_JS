@@ -31,16 +31,14 @@ let todoList = [
     }
 ];
 const ul = document.getElementById("myUL");
-let listHTML = ""; 
-
-todoList.forEach(item => {
+let row = ""; 
+todoList.forEach(element => {
     let className = ""; 
-    if (item.completed) {
+    if (element.completed) {
         className = "checked"; 
     }
-    listHTML += `
-        <li class="${className}">${item.task} <span class="close">×</span></li>
+    row += `
+        <li class="${className}">${element.task} <span class="close">X</span></li>
     `;
 });
-
-ul.innerHTML = listHTML;
+ul.innerHTML = row;

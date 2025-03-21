@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+}
+#increase{
+    font-size: 30px;
+    border-radius: 5px;
+    color: white;
+    border: 0px;
+    background-color:aqua;
+    padding: 5px 20px; 
+}
+#dicrease{
+    font-size: 30px;
+    border-radius: 5px;
+    color: white;
+    border: 0px;
+    background-color:aqua;
+    padding: 5px 20px; 
+}
+#row {
+    display: flex;
+    position: relative;
+    width: 600px;
+    background-color: #ffffff;
+    height: 50px;
+    margin-bottom: 50px;
+    margin: 50px auto;
+}
+#progress {
+    position: absolute;
+    top: 59px;
+    left: 555px;
+    width: 0;
+    background-color: green;
+    height: 50px;
+    margin-bottom: 50px;
+    margin: 50px auto;
+}

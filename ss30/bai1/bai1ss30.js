@@ -144,4 +144,4 @@ function calculateTotal() {
     }
     let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     console.log(`Tổng số tiền thanh toán: ${total}`);
-}1
+}

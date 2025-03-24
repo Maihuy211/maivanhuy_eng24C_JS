@@ -17,7 +17,7 @@ function renderProducts() {
         <div class="product-card">
             <img src="${item.image}" alt="${item.name}" class="product-image">
             <div class="product-title">${item.name}</div>
-            <div class="product-price">${item.price.toLocaleString()}₫</div>
+            <div class="product-price">${item.price.toLocaleString('vi-VN')}₫</div>
             <button class="add-to-cart-btn" onclick="addToCart(${item.id})">Thêm vào giỏ hàng</button>
         </div>`;
     });
@@ -35,7 +35,7 @@ function updateCart() {
         <div class="cart-item">
             <div class="cart2">
                 <span class="cart-item-title">${item.name}</span>
-                <span class="cart-item-price">${item.price.toLocaleString()}₫ x${item.quantity}</span>
+                <span class="cart-item-price">${item.price.toLocaleString('vi-VN')}₫ x${item.quantity}</span>
             </div>
             <div class="quantity-controls">
                 <button class="decrease" onclick="decrease(${item.id})">-</button>

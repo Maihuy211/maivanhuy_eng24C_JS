@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0c1f5dacbd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./bai6ss35.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tilte-add">
+        <h3>Danh mục</h3>
+        <button id="btn-addCategory">Thêm mới danh mục</button>
+    </div>
+    <div class="input">
+        <select name="select" id="status">
+            <option value="all">Tất cả</option>
+            <option value="on">Đang hoạt động</option>
+            <option value="off">Ngừng hoạt động</option>
+        </select>
+        <input type="search" id="search" placeholder="Tìm kiếm danh mục theo tên">
+        <i class="fa-solid fa-magnifying-glass" id="icon"></i>
+    </div>   
+    <table id="employeeTable" border="1">
+        <thead>
+            <tr>
+                <th>Mã danh mục <i class="fa-solid fa-arrow-down"></i></th>
+                <th>Tên danh mục <i class="fa-solid fa-arrow-down"></i></th>
+                <th>Trạng thái</th>
+                <th>Chức năng</th>           
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    <div id="bodyAdd">
+        <div id="closeButton"> 
+            <div class="title">
+                <h3>Thêm danh mục</h3>
+                <div id="close">X</div>
+            </div>
+            <div id="closeMenu">
+                <label for="nameCate">Mã danh mục:</label>
+                <input type="text" id="nameCate">
+                <p id="idError">Mã danh mục ko đc để trống</p> 
+                <label for="nameCates">Tên danh mục:</label>
+                <input type="text" id="nameCates">
+                <p id="nameError">Tên danh mục ko được để trống</p>      
+                <label>Trạng thái:</label>
+                <div class="radio">
+                    <input type="radio" id="active" name="status" value="active">
+                    <label for="active">Đang hoạt động</label>
+    
+                    <input type="radio" id="inactive" name="status" value="inactive">
+                    <label for="inactive">Ngừng hoạt động</label>
+                </div>
+                <hr>
+                <div id="buttonpos">
+                    <button id="buttonCancel">Hủy</button>
+                    <button id="buttonAdd">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./bai6ss35.js"></script>
+</body>
+</html>

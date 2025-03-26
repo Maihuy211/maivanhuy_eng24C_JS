@@ -1,0 +1,150 @@
+body{
+    margin: 0px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+.tilte-add{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#btn-addCategory{
+    height: 30px;
+    background-color: #4094f7;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.input{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+#status{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+}
+#search{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 220px;
+    position: relative;
+}
+#icon{
+    position: absolute;
+    right: 5px;
+    top: 70px;
+}
+table {
+    width: 100%;
+    border: none;
+    border-spacing: 0;
+    font-size: 14px;
+    text-align: left;
+    background-color: #f9fafb;
+    margin-top: 10px;
+}
+th, td {
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid gainsboro;
+}
+th{
+    color: #6a7488;
+}
+#bodyAdd{
+    display: none;
+    justify-content: center;
+    margin: auto;
+    margin-left: 120px;
+}
+#closeMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#nameCate{
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#nameCates{
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.radio{
+    height: 0px;
+}
+#bodyAdd{
+    border: 1px solid black;
+    width: 500px;
+    padding: 15px;
+    border-radius: 5px;
+    position: fixed;
+    top: 100px;
+    left: 370px;
+    background-color: white;
+}
+#buttonpos{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+#buttonAdd{
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 60px;
+}
+#buttonCancel{
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    width: 60px;
+    padding: 10px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+h3{
+    font-size: x-large;
+    margin-top: 0px;
+}
+i{
+    margin-right: 30px;
+}
+#nameError {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+#idError {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+.fa-pencil{
+    color: rgb(248, 197, 109);
+}
+.fa-trash-can{
+    color: red;
+}
+.active {
+    background-color: rgb(228, 241, 208) ;
+    color: green ;
+    border: 1px solid green ;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+.inactive {
+    background-color: rgb(254, 153, 153); 
+    color: red; 
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 0 5px;
+}

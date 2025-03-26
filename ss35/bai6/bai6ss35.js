@@ -23,7 +23,7 @@ function renderList() {
     let filterList = [];
     for (let i = 0; i < list.length; i++) {
         if (selectedStatus === "all") {
-            filteredList.push(list[i]); 
+            filterList.push(list[i]); 
         } else if (selectedStatus === "on") {
             if (list[i].status === "Đang hoạt động") {
                 filterList.push(list[i]);

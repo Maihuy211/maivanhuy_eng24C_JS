@@ -3,6 +3,7 @@ let courses = [
     { id: 2, name: "Trần Thị B", position: "Designer" },
     { id: 3, name: "Phạm Văn C", position: "Project Manager" }
 ];
+localStorage.setItem("employeeList",JSON)
 function renderCourses() {
     let table = document.getElementById("tableBody");
     table.innerHTML = "";
@@ -22,7 +23,6 @@ add.onclick = function () {
 function addTask() {
     let name = document.getElementById("name").value;
     let position = document.getElementById("position").value;
-    
     if (name === "" || position === "") {
         alert("Thông tin trống");
     } else {
@@ -55,3 +55,15 @@ function save() {
     localStorage.setItem('courseslist', JSON.stringify(courses));
 }
 renderCourses();
+let paginationContainer = document.getElementById("pagination")
+let totalPages = 4
+for(let i = 1 ; i < totalPages ; i++){
+    let li = `
+    <li class="page-item"><a class="page-link" href="#">${i}</a></li>
+    `
+    paginationContainer.innerHTML += li;  
+}
+paginationContainer.innerHTML += `<li class="page-item"><a class="page-link" href="#">Next</a></li>`;  
+
+
+

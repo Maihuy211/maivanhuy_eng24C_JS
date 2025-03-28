@@ -44,14 +44,3 @@ th {
     background-color: #dddddd;
     color: white;
 }
-.pagination {
-    margin-top: 10px;
-}
-.pagination button {
-    padding: 5px 10px;
-    margin: 2px;
-    background-color: white;
-}
-.pagination button.active {
-    background-color: rgb(13, 150, 241);
-}

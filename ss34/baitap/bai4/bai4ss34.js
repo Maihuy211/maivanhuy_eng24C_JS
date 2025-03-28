@@ -38,6 +38,6 @@ function deleteTodo(id) {
     renderMission();
 }
 function save() {
-    sessionStorage.setItem('missionlist', JSON.stringify(mission));
+    localStorage.setItem('missionlist', JSON.stringify(mission));
 }
 renderMission();

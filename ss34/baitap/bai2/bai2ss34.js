@@ -44,7 +44,6 @@ function addTask() {
     save();
     renderCourses();
 }
-
 function editTask(index) {
     let task = courses[index];
     document.getElementById("content").value = task.content;
@@ -55,7 +54,6 @@ function editTask(index) {
         updateTask(index);
     };
 }
-
 function updateTask(index) {
     let content = document.getElementById("content").value.trim();
     let dueDate = document.getElementById("date").value.trim();
@@ -87,7 +85,7 @@ function deleteTask(index) {
     renderCourses();
 }
 function save() {
-    sessionStorage.setItem('courseslist', JSON.stringify(courses));
+    localStorage.setItem('courseslist', JSON.stringify(courses));
 }
 
 renderCourses();
